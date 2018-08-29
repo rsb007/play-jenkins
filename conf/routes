@@ -1,0 +1,10 @@
+# Routes
+GET          /                                    controllers.Application.index
+POST        /register                             controllers.Application.register
+GET        /signin                                controllers.Application.signinForm
+GET       /user                                   controllers.Application.getUser
+GET      /forgetpassword                          controllers.Application.forgetpassword
+GET     /change                                   controllers.Application.changepassword
+GET    /viewalluser                               controllers.Application.viewAllUser
+GET   /home                                       controllers.Application.homepage
+GET  /public/*file                                controllers.Assets.at(path="/public", file)

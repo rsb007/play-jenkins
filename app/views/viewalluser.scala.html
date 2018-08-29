@@ -1,0 +1,50 @@
+@(users: Seq[models.UserInfo])(implicit requestHeader:RequestHeader,flash:Flash);
+
+@import helper._
+@main{
+<body class="background3">
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+        </div>
+        <ul class="nav navbar-nav header-left">
+            <li ><a href="#">HOME</a></li>
+            <li ><a href="profile">PROFILE</a></li>
+            <li ><a href="#">VIEW ASSIGNMENTS</a></li>
+            <li ><a href="user">VIEW USER</a></li>
+            <li ><a href="#">ADD ASSIGNMENT</a></li>
+            <li ><a href="signin"> LOG OUT</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+<h2 align="center">Users Information</h2>
+<table class="table table-bordered table1">
+    <thead class="table1">
+    <tr >
+        <th >Firstname</th>
+        <th >Lastname</th>
+        <th >Email</th>
+        <th >Mobile Number</th>
+        <th >Gender</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    @for( user <- users){
+    <tr align="center" bgcolor="white">
+        <td>@user.firstname</td>
+        <td>@user.lastname</td>
+        <td>@user.email</td>
+        <td>@user.mobile</td>
+        <td>@user.gender</td>
+
+
+    </tr>
+    }
+    </tbody>
+</table>
+</body>
+}
