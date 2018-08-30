@@ -1,4 +1,4 @@
-ps aux | grep -ie play | awk '{print "kill -9 " $2}' | sh -x
+ps aux | grep -ie play-final-assignment | awk '{print "kill -9 " $2}' | sh -x
 rm -r play-final-assignment-1.0-SNAPSHOT | echo "artifact already deleted"
 unzip play-final-assignment-1.0-SNAPSHOT.zip
 rm -f play-final-assignment-1.0-SNAPSHOT.zip  
