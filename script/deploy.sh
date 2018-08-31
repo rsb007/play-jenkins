@@ -1,5 +1,1 @@
-ps aux | grep -ie play-final-assignment | awk '{print "kill -9 " $2}' | sh -x
-rm -r play-final-assignment-1.0-SNAPSHOT | echo "artifact already deleted"
-unzip play-final-assignment-1.0-SNAPSHOT.zip
-rm -f play-final-assignment-1.0-SNAPSHOT.zip  
-./play-final-assignment-1.0-SNAPSHOT/bin/play-final-assignment &
+docker run -d -p 9000:9000 play_image
